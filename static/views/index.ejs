@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- link rel="stylesheet" href="index.css" -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>appleseed's TODO list</h1>
+      <form action="/api/todo" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input name="name" type="text" class="form-control" id="name" placeholder="AJAX seminar" />
+        </div>
+        <div class="form-group">
+          <label for="todo">Todo</label>
+          <input name="todo" type="text" class="form-control" id="todo" placeholder="Prepare slides!" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <hr>
+      <% todos.forEach((e) => { %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Name</h5>
+          <p class="card-text"><%= e.name %></p>
+          <h5 class="card-title">Todo</h5>
+          <p class="card-text"><%= e.todo  %></p>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: AppleSDGothicNeoL00;
+    font-size: 15px;
+}
+
+#header{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+    font-family: Gloss And Bloom;
+    text-align: center;
+}
+
+#header #htop{
+    height: 50px;
+}
+
+#header #hbtm #title{
+    list-style: none;
+    line-height: 130px;
+    font-size: 60px;
+}
+#header #hbtm #subtitle{
+    list-style: none;
+    line-height: 20px;
+    font-size: 20px;
+    color: #d5111c;
+}
+
+div.left {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+div.right {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#pad{
+    width: 100%;
+    list-style: none;
+}
+
+#pad label{
+    margin: 5px 0;
+    line-height: 35px;
+}
+
+#pad input[type="number"]{
+    width: 50px;
+    height: 25px;
+    padding: 0 0 0 5px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#pad input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+    vertical-align: -2px;
+    display: inline-block;
+}
+
+#pad input[type="checkbox"].counter{
+    vertical-align:-2px;
+    margin-left: 5px;
+}
+
+#pad .table thead tr th{
+    font-family: AppleSDGothicNeoB00;
+    font-weight: lighter;
+}
+
+#pad .table tbody tr th{
+    font-family: AppleSDGothicNeoL00;
+    font-weight: lighter;
+}
+
+#pad .table tbody tr th.price{
+    text-align: center;
+}
+
+button{
+    width: 100%;
+}
+
+.blank{
+    height: 35px;
+}
+
+#card-container .card{
+    margin: 10px 0;
+}
+
+#card-container #checkboxes{
+    list-style: none;
+}
+
+.card-container input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+    margin-left: 5px;
+    vertical-align: -2px;
+    display: inline-block;
+}
