@@ -17,6 +17,8 @@ router.get('/pad', (req, res) => {
 router.post('/pad', (req, res) => {
   const pad = new Pad();
   pad.tableNum = req.body.tableNum;
+  pad.menu = req.body.menu;
+
   pad.save((err, result) => {
     if (err) return res.status(500).end('DB error');
     return res.sendStatus(200);

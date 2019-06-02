@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 
 const padSchema = mongoose.Schema({
   tableNum: Number,
-  menu: {
-    porkBelly: Boolean
-  },
+  menu: [String],
   payment: Boolean,
   allServed: Boolean
 })

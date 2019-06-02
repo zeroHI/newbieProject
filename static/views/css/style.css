@@ -75,12 +75,12 @@ div.right {
     margin-left: 5px;
 }
 
-#pad .table thead tr th{
+.table thead tr th{
     font-family: AppleSDGothicNeoB00;
     font-weight: lighter;
 }
 
-#pad .table tbody tr th{
+.table tbody tr th{
     font-family: AppleSDGothicNeoL00;
     font-weight: lighter;
 }
@@ -112,4 +112,22 @@ button{
     margin-left: 5px;
     vertical-align: -2px;
     display: inline-block;
+}
+
+.card-body div.left {
+    /* display: inline-block; */
+    width: 80%;
+    float: left;
+}
+
+.card-body div.left .table {
+    margin: 0;
+}
+
+.card-body div.right {
+    /* display: inline-block; */
+    width: 20%;
+    float: right;
+    padding-top: 40px;
+    text-align: center;
 }
