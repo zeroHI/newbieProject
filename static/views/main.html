@@ -3,135 +3,163 @@
   <head>
     <title>TODO</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-Gogi-tab" data-toggle="pill" href="#pills-Gogi" role="tab" aria-controls="pills-Gogi" aria-selected="false">고기부</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pills-Yori-tab" data-toggle="pill" href="#pills-Yori" role="tab" aria-controls="pills-Yori" aria-selected="false">요리부</a>
+      </li>
+    </ul>
     <div class="container">
-      <div id="header">
-        <div id="htop"></div>
-        <div id="hbtm">
-          <ul>
-            <li id="title">Order Pad</li>
-            <li id="subtitle">newbieProject</li>
-          </ul>
-        </div>
-      </div>
-      <form id="form">
-        <div class="left">
-          <div class="form-group">
-            <ul id="pad">
-              <li><label>Table number<input type="number" class="form-control" id="tableNum"/></label></li>
-              <li>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th id="type" style="width: 25%">Type</th>
-                    <th id="name" style="width: 40%">Name</th>
-                    <th id="price" style="width: 25%; text-align: center">Price(won)</th>
-                    <th id="chosen" style="width: 10%"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th class="type">고기/전류</th>
-                    <th class="name">삼겹살</th>
-                    <th class="price">8000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Samgyeopsal"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">부추전</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Buchujeon"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">김치전</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Kimchijeon"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">스팸김치</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type">식사류</th>
-                    <th class="name">빨간 고기 라면</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">하얀 고기 라면</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">소떡소떡</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">주먹밥</th>
-                    <th class="price">3000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type">베이스</th>
-                    <th class="name">벚꽃 스톤</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">썸머 스톤</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">요구르트 스톤</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">청포도 스톤</th>
-                    <th class="price">4000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type">음료</th>
-                    <th class="name">콜라/사이다</th>
-                    <th class="price">1000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                  <tr>
-                    <th class="type"></th>
-                    <th class="name">물</th>
-                    <th class="price">1000</th>
-                    <th class="chosen"><input type="checkbox" class="form-control"></th>
-                  </tr>
-                </tbody>
-              </table>
-              </li>
-            </ul>
+      <!-- HOME -->
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div id="header">
+            <div id="htop"></div>
+            <div id="hbtm">
+              <ul>
+                <li id="title">Order Pad</li>
+                <li id="subtitle">newbieProject</li>
+              </ul>
+            </div>
           </div>
-          <button onclick="submitForm()" class="btn btn-primary">Submit</button>
+          <form id="form">
+            <div class="left">
+              <div class="form-group">
+                <ul id="pad">
+                  <li><label>Table number<input type="number" class="form-control" id="tableNum"/></label></li>
+                  <li>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th id="type" style="width: 25%">Type</th>
+                        <th id="name" style="width: 40%">Name</th>
+                        <th id="price" style="width: 25%; text-align: center">Price(won)</th>
+                        <th id="chosen" style="width: 10%"><input type="checkbox" class="form-control"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="type">고기/전류</th>
+                        <th class="name">삼겹살</th>
+                        <th class="price">8000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Samgyeopsal"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">부추전</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Buchujeon"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">김치전</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Kimchijeon"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">스팸김치</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Spam&Kimchi"></th>
+                      </tr>
+                      <tr>
+                        <th class="type">식사류</th>
+                        <th class="name">빨간 고기 라면</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="RedRamyeon"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">하얀 고기 라면</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="WhiteRamyeon"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">소떡소떡</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="SotthuckSotthuck"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">주먹밥</th>
+                        <th class="price">3000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Rice"></th>
+                      </tr>
+                      <tr>
+                        <th class="type">베이스</th>
+                        <th class="name">벚꽃 스톤</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_Blossom"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">썸머 스톤</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_Summer"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">요구르트 스톤</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_yogurt"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">청포도 스톤</th>
+                        <th class="price">4000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_grape"></th>
+                      </tr>
+                      <tr>
+                        <th class="type">음료</th>
+                        <th class="name">콜라/사이다</th>
+                        <th class="price">1000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="SoftDrink"></th>
+                      </tr>
+                      <tr>
+                        <th class="type"></th>
+                        <th class="name">물</th>
+                        <th class="price">1000</th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Water"></th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </li>
+                </ul>
+              </div>
+              <button onclick="submitForm()" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+          <div class="right">
+            <div class="blank"></div>
+            <div id="card-container">
+            </div>
+          </div>
         </div>
-      </form>
-      <div class="right">
-        <div class="blank"></div>
-        <div id="card-container">
+        <!-- GOGI -->
+        <div class="tab-pane fade" id="pills-Gogi" role="tabpanel" aria-labelledby="pills-Gogi-tab">
+          <p>gogi</p>
+        </div>
+        <!-- YORI -->
+        <div class="tab-pane fade" id="pills-Yori" role="tabpanel" aria-labelledby="pills-Yori-tab">
+          <p>yori</p>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
   </body>
+  <script type="text/javascript" src="main.js"></script>
 </html>

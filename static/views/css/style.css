@@ -7,16 +7,25 @@ body {
     font-size: 15px;
 }
 
+.nav {
+    margin-top: 20px;
+    margin-left: 13%;
+}
+
+.taps .nav a {
+    color: #333333;
+}
+
 #header{
     width: 100%;
-    height: 200px;
+    height: 220px;
     margin-bottom: 50px;
     font-family: Gloss And Bloom;
     text-align: center;
 }
 
 #header #htop{
-    height: 50px;
+    height: 70px;
 }
 
 #header #hbtm #title{

@@ -1,5 +1,10 @@
 console.log('start');
 
+$('#myTab').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
 axios.get('/api/pad')
 .then((res) => {
   console.log(res.data);
