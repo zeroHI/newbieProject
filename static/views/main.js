@@ -41,11 +41,11 @@ function addElement(tableNum, menu) {
         <table class="table">
         <thead>
           <tr>
-            <th style="width: 75%">Ordered</th>
-            <th style="width: 25%">quantity</th>
+            <th style="width: 70%">Ordered</th>
+            <th style="width: 30%; text-align: center">quantity</th>
           </tr>
         </thead>
-        <tbody class="${tableNum} order">
+        <tbody class="${tableNum}order">
         </tbody>
         </table>
       </div>
@@ -57,36 +57,32 @@ function addElement(tableNum, menu) {
   `;
   document.getElementById('card-container').prepend(newdiv);
 
-  console.log("menu: " + menu);
-  console.log("menu.length " + menu.length);
   if (menu != undefined) {
-    console.log("good");
-    
-    addMenuList = function(n, callback) {
-      setTimeout(function() {
-        if (n <= 0) {
-          callback();
-        }
-        else {
-          console.log(menu[n]);
-          let tr = document.createElement('tr');
-          let th_menu = document.createElement('th');
-          let th_quantity = document.createElement('th');
-          th_menu.innerHTML = menu[n];
-          th_quantity.innerHTML = 1;
-          tr.append(th_menu);
-          tr.append(th_quantity);
-          document.getElementsByClassName(`${tableNum} order`)[0].append(tr);
 
-          addMenuList(n-1, callback);
-        }
-      }, 10);
+    addMenuList = function(n, callback) {   
+      if (n < 0) {
+        callback();
+      }
+      else {
+        console.log("start : " + tableNum + " / " + menu);
+        let tr = document.createElement('tr');
+        let th_menu = document.createElement('th');
+        let th_quantity = document.createElement('th');
+        th_menu.innerHTML = menu[n];
+        th_quantity.className = 'quantity';
+        th_quantity.innerHTML = 1;
+        tr.append(th_menu);
+        tr.append(th_quantity);
+        document.getElementsByClassName(`${tableNum}order`)[0].append(tr);
+
+        addMenuList(n-1, callback);
+      }
+     
     }
     
     addMenuList(menu.length - 1, function() {
-      console.log(newdiv.innerHTML);
-      console.log("menuLength: " + menu.length);
-      console.log('done');
+      // console.log(newdiv.innerHTML);
+      // console.log('done');
     });
   }
 }
