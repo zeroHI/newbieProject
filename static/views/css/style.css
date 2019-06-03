@@ -12,10 +12,6 @@ body {
     margin-left: 13%;
 }
 
-.taps .nav a {
-    color: #333333;
-}
-
 #header{
     width: 100%;
     height: 220px;
@@ -145,3 +141,31 @@ button{
     text-align: center;
 }
 
+div.tabLeft {
+    width: 60%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div.tabRight {
+    width: 40%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card.tab {
+    display: inline-block;
+    margin-right: 3px;
+    margin-left: 4px;
+    width: 48%;
+}
+
+.toBeServed {
+    text-align: center;
+}
+
+.hidden {
+    background-color: #ffe1e2;
+}

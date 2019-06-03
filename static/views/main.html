@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO</title>
+    <title>ORDER</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> 
@@ -92,19 +92,19 @@
                         <th class="type"></th>
                         <th class="name">소떡소떡</th>
                         <th class="price">4000</th>
-                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="SotthuckSotthuck"></th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Sotteoksotteok"></th>
                       </tr>
                       <tr>
                         <th class="type"></th>
                         <th class="name">주먹밥</th>
                         <th class="price">3000</th>
-                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Rice"></th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Riceballs"></th>
                       </tr>
                       <tr>
                         <th class="type">베이스</th>
                         <th class="name">벚꽃 스톤</th>
                         <th class="price">4000</th>
-                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_Blossom"></th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_Blossoms"></th>
                       </tr>
                       <tr>
                         <th class="type"></th>
@@ -116,13 +116,13 @@
                         <th class="type"></th>
                         <th class="name">요구르트 스톤</th>
                         <th class="price">4000</th>
-                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_yogurt"></th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_Yogurt"></th>
                       </tr>
                       <tr>
                         <th class="type"></th>
                         <th class="name">청포도 스톤</th>
                         <th class="price">4000</th>
-                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_grape"></th>
+                        <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Base_GreenGrape"></th>
                       </tr>
                       <tr>
                         <th class="type">음료</th>
@@ -152,11 +152,85 @@
         </div>
         <!-- GOGI -->
         <div class="tab-pane fade" id="pills-Gogi" role="tabpanel" aria-labelledby="pills-Gogi-tab">
-          <p>gogi</p>
+          <div class="tabLeft">
+            <div id="gogi-container">
+
+            </div>
+          </div>
+          <div class="tabRight">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th id="name" style="width: 40%">Name</th>
+                  <th id="toBeServed" style="width: 40%; text-align: center">#To be served</th>
+                  <th id="chosen" style="width: 10%"><input type="checkbox" class="form-control"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="name">삼겹살</th>
+                  <th class="toBeServed" id="SamgyeopsalTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Samgyeopsal"></th>
+                </tr>
+                <tr>
+                  <th class="name">부추전</th>
+                  <th class="toBeServed" id="BuchujeonTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Buchujeon"></th>
+                </tr>
+                <tr>
+                  <th class="name">김치전</th>
+                  <th class="toBeServed" id="KimchijeonTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Kimchijeon"></th>
+                </tr>
+                <tr>
+                  <th class="name">스팸김치</th>
+                  <th class="toBeServed" id="SpamKimchiTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Spam&Kimchi"></th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <!-- YORI -->
         <div class="tab-pane fade" id="pills-Yori" role="tabpanel" aria-labelledby="pills-Yori-tab">
-          <p>yori</p>
+          <div class="tabLeft">
+            <div id="yori-container">
+              
+            </div>
+          </div>
+          <div class="tabRight">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th id="name" style="width: 40%">Name</th>
+                  <th id="toBeServed" style="width: 40%; text-align: center">#To be served</th>
+                  <th id="chosen" style="width: 10%"><input type="checkbox" class="form-control"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="name">빨간고기라면</th>
+                  <th class="toBeServed" id="RedRamyeonTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="RedRamyeon"></th>
+                </tr>
+                <tr>
+                  <th class="name">하얀고기라면</th>
+                  <th class="toBeServed" id="WhiteRamyeonTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="WhiteRamyeon"></th>
+                </tr>
+                <tr>
+                  <th class="name">소떡소떡</th>
+                  <th class="toBeServed" id="SotteoksotteokTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Sotteoksotteok"></th>
+                </tr>
+                <tr>
+                  <th class="name">주먹밥</th>
+                  <th class="toBeServed" id="RiceballsTBS"></th>
+                  <th class="chosen"><input type="checkbox" class="form-control" name="menu" value="Riceballs"></th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

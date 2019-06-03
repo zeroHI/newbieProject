@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/static/views/main.html');
 });
 
-const server = app.listen(80, () => {
+const server = app.listen(8000, () => {
   console.log('server running at port 80');
 });
 
