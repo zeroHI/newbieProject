@@ -284,8 +284,8 @@ function decrement(container) {
   for (i = 0; i < rows.length; i++) {
     // console.log(rows[i].childNodes[0].innerHTML);
     if (rows[i].childNodes[0].innerHTML === "Samgyeopsal") {
-      RedRamyeonTBS += incr;
-      document.getElementById('SamgyeopsalTBS').innerHTML = RedRamyeonTBS;
+      SamgyeopsalTBS += incr;
+      document.getElementById('SamgyeopsalTBS').innerHTML = SamgyeopsalTBS;
     }
     else if (rows[i].childNodes[0].innerHTML === "Buchujeon") {
       BuchujeonTBS += incr;

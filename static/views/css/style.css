@@ -12,6 +12,10 @@ body {
     margin-left: 13%;
 }
 
+.nav-pills {
+    color: #d5111c;
+}
+
 #header{
     width: 100%;
     height: 220px;
@@ -168,4 +172,5 @@ div.tabRight {
 
 .hidden {
     background-color: #ffe1e2;
+    /* display: none !important; */
 }
